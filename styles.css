@@ -157,6 +157,7 @@ main .gastronomic .titleElement h2 {
 }
 main .gastronomic .containGastronomic {
     font-family: "Playfair Display", serif;
+    color: #969090;
   
     display: flex;
     align-items: center;
