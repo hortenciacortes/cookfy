@@ -95,10 +95,11 @@ input{
     justify-content: center;
 }
 /* MAIN */
+/* RECIPE */
 main .recipe{
     max-width: 950px;
     margin: auto;
-    padding: 45px 0;
+    padding: 45px 0 0;
 }
 main .recipe > h2{
     margin-bottom: 0;
@@ -134,6 +135,51 @@ main .recipe .recipe-items .recipe-text .arrow{
 }
 main .recipe > img.visual{
     display: flex;
-    margin: 80px auto;
+    margin: 50px auto;
     width: 120px;
+}
+/* GATRONOMIC */
+
+main .gastronomic {
+    max-width: 950px;
+    margin: auto;
+    padding: 0 0 120px;
+}
+main .gastronomic img {
+    width: 100px;
+}
+main .gastronomic .titleElement {
+    display: flex;
+    align-items: center;
+}
+main .gastronomic .titleElement h2 {
+    min-width: 400px;
+}
+main .gastronomic .containGastronomic {
+    font-family: "Playfair Display", serif;
+  
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 20px auto;
+}
+main .gastronomic .containGastronomic .card {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  
+    margin: 5px 40px 5px 0;
+    padding: 20px 60px;
+    border: solid 0.5px #f0f0f0;
+}
+main .gastronomic .containGastronomic .card.detach {
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
+}
+main .gastronomic .containGastronomic .card img {
+    width: 40px;
+    height: 40px;
+}
+main .gastronomic .containGastronomic img.cake {
+    width: 380px;
+    margin-right: 20px;
 }
