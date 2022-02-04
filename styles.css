@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Allura&family=Caveat&family=Roboto:wght@300;700&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;700&display=swap');
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -18,11 +18,15 @@ header{
     padding: 24px 0;
 }
 h2{
+    font-family: 'Playfair Display', serif;
     font-size: 28px;
     margin: auto;
     margin-bottom: 30px;
     text-align: center;
     max-width: 272px;
+}
+h3{
+    font-family: 'Playfair Display', serif;
 }
 #header {
     display: flex;
@@ -33,6 +37,8 @@ h2{
 }
 #logo {
     display: flex;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
     font-size: 20.5px;
     font-weight: bold;
 }
@@ -87,4 +93,47 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* MAIN */
+main .recipe{
+    max-width: 950px;
+    margin: auto;
+    padding: 45px 0;
+}
+main .recipe > h2{
+    margin-bottom: 0;
+}
+main .recipe > img{
+    width: 70px;
+    margin-left: 850px;
+}
+main .recipe .recipe-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .recipe .recipe-items .recipe-text{
+    width: 200px;
+    height: 155px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+main .recipe .recipe-items .recipe-text small{
+    font-size: 12px;
+    font-weight: bold;
+}
+main .recipe .recipe-items .recipe-text .arrow{
+    width: 30px;
+    margin-right: 8px;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 16%);
+    background-color: #ffff;
+}
+main .recipe > img.visual{
+    display: flex;
+    margin: 80px auto;
+    width: 120px;
 }
