@@ -1,186 +1,254 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;700&display=swap");
 
-*{
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 body {
 }
 .detach {
-    color: #e82147;
+  color: #e82147;
 }
 /* HEADER */
-header{
-    height: 386px;
-    background-color: #ffdbbc;
-    padding: 24px 0;
+header {
+  height: 386px;
+  background-color: #ffdbbc;
+  padding: 24px 0;
 }
-h2{
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    margin: auto;
-    margin-bottom: 30px;
-    text-align: center;
-    max-width: 272px;
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  margin: auto;
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 272px;
 }
-h3{
-    font-family: 'Playfair Display', serif;
+h3 {
+  font-family: "Playfair Display", serif;
 }
 #header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 950px;
-    margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 950px;
+  margin: auto;
 }
-#logo {
-    display: flex;
-    align-items: center;
-    font-family: 'Playfair Display', serif;
-    font-size: 20.5px;
-    font-weight: bold;
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Playfair Display", serif;
+  font-size: 20.5px;
+  font-weight: bold;
 }
-input{
-    width: 366px;
-    height: 30px;
-    border-radius: 16.5px;
-    box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
-    border: none;
-    padding: 9px 22px;
-    outline: 0;
+input {
+  width: 366px;
+  height: 30px;
+  border-radius: 16.5px;
+  box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
+  border: none;
+  padding: 9px 22px;
+  outline: 0;
 
-    background-image: url('./assets/images/lupa.svg');
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position: 326px;
+  background-image: url("./assets/images/lupa.svg");
+  background-repeat: no-repeat;
+  background-size: 14px;
+  background-position: 326px;
 }
-#user{
-    display: flex;
-    align-items: center;
+#user {
+  display: flex;
+  align-items: center;
 }
-#user > p.detach{
-    font-weight: bold;
-    margin-right: 10px;
+#user > p.detach {
+  font-weight: bold;
+  margin-right: 10px;
 }
 #user > img {
-    width: 60px;
-    background-color: #e82147;
-    padding: 10px;
-    border-radius: 50%;
+  width: 60px;
+  background-color: #e82147;
+  padding: 10px;
+  border-radius: 50%;
 }
-#header-infos{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 40px 150px 0 0;
-    max-width: 950px;
-    margin: auto;
+#header-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 150px 0 0;
+  max-width: 950px;
+  margin: auto;
 }
-#header-infos > img{
-    width: 160px;
+#header-infos > img {
+  width: 160px;
 }
-#header-infos .text > p{
-    font-weight: bold;
+#header-infos .text > p {
+  font-weight: bold;
 }
-#header-infos .header-image{   
-    background-image: url('./assets/images/elemento_1.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 300px;
-    height: 220px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#header-infos .header-image {
+  background-image: url("./assets/images/elemento_1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header-infos .header-image:hover {
+    cursor: pointer;
+}
+.areaDescription{
+    width: 100%;
+    background-color: #f0f0f0;
+    
 }
 /* MAIN */
 /* RECIPE */
-main .recipe{
-    max-width: 950px;
-    margin: auto;
-    padding: 45px 0 0;
+main .recipe {
+  max-width: 950px;
+  margin: auto;
+  padding: 45px 0 0;
 }
-main .recipe > h2{
-    margin-bottom: 0;
+main .recipe > h2 {
+  margin-bottom: 0;
 }
-main .recipe > img{
-    width: 70px;
-    margin-left: 850px;
+main .recipe > img {
+  width: 70px;
+  margin-left: 850px;
 }
-main .recipe .recipe-items{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+main .recipe .recipe-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-main .recipe .recipe-items .recipe-text{
-    width: 200px;
-    height: 155px;
+main .recipe .recipe-items .recipe-text {
+  width: 200px;
+  height: 155px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-main .recipe .recipe-items .recipe-text small{
-    font-size: 12px;
-    font-weight: bold;
+main .recipe .recipe-items .recipe-text small {
+  font-size: 12px;
+  font-weight: bold;
 }
-main .recipe .recipe-items .recipe-text .arrow{
-    width: 30px;
-    margin-right: 8px;
-    padding: 10px;
-    border-radius: 50%;
-    box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 16%);
-    background-color: #ffff;
+main .recipe .recipe-items .recipe-text .arrow {
+  width: 30px;
+  margin-right: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 16%);
+  background-color: #ffff;
 }
-main .recipe > img.visual{
-    display: flex;
-    margin: 50px auto;
-    width: 120px;
+main .recipe > img.visual {
+  display: flex;
+  margin: 50px auto;
+  width: 120px;
 }
 /* GATRONOMIC */
 
 main .gastronomic {
-    max-width: 950px;
-    margin: auto;
-    padding: 0 0 120px;
+  max-width: 950px;
+  margin: auto;
+  padding: 0 0 120px;
 }
 main .gastronomic img {
-    width: 100px;
+  width: 100px;
 }
 main .gastronomic .titleElement {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+.card:hover{
+    cursor: pointer;
+    filter: invert(52%) sepia(96%) saturate(7430%) hue-rotate(337deg) brightness(93%) contrast(95%);
+}
+.active{
+    filter: invert(52%) sepia(96%) saturate(7430%) hue-rotate(337deg) brightness(93%) contrast(95%);
 }
 main .gastronomic .titleElement h2 {
-    min-width: 400px;
+  min-width: 400px;
 }
 main .gastronomic .containGastronomic {
-    font-family: "Playfair Display", serif;
-    color: #969090;
-  
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    margin: 20px auto;
+  font-family: "Playfair Display", serif;
+  color: #969090;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin: 20px auto;
 }
 main .gastronomic .containGastronomic .card {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  
-    margin: 5px 40px 5px 0;
-    padding: 20px 60px;
-    border: solid 0.5px #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 5px 40px 5px 0;
+  padding: 20px 60px;
+  border: solid 0.5px #f0f0f0;
 }
 main .gastronomic .containGastronomic .card.detach {
-    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
 }
 main .gastronomic .containGastronomic .card img {
-    width: 40px;
-    height: 40px;
+  width: 40px;
+  height: 40px;
 }
 main .gastronomic .containGastronomic img.cake {
-    width: 380px;
-    margin-right: 20px;
+  width: 380px;
+  margin-right: 20px;
+}
+/* FOOTER */
+footer img.footerBack {
+  position: relative;
+  width: 100%;
+}
+footer .figures {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .figures > img {
+  width: 125px;
+  height: 75px;
+}
+footer .figures > img.figure1 {
+    margin-top: 15px;
+    margin-left: 50px;
+    position: absolute;
+}
+footer .figures > img.figure2 {
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 20px;
+    z-index: 1;
+}
+footer .containFooter {
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  
+  margin-top: 50px;
+  margin-left: 180px;
+}
+footer .copyright {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 280px;
+}
+footer .copyright > small {
+    font-size: 10px;
+}
+footer .social {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+footer .social > img {
+  width: 20px;
+  height: 20px;
 }
