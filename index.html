@@ -48,35 +48,44 @@
       <img src="./assets/images/elemento_7.svg" alt="Imagem aleatória para efeito visual">
       <div class="recipe-items">
         <div class="recipe-image">
-          <img src="./assets/images/prato_2.png" alt="Sanduíche de tomate com salada de ovos">
+          <div id="recipe-img">
+            <img src="./assets/images/prato_2.png" alt="Sanduíche de tomate com salada de ovos">
+          </div>
           <figcaption class="areaDescription">
             <img src="./assets/images/arrow_right.svg" alt="Seta para direita">
             <small class="detach">Ver foto</small>
           </figcaption>
         </div>
         <div class="recipe-text">
-          <small class="detach">Adicionado Ontem</small>
-          <h3>Sanduíche de tomate com salada de ovos</h3>
-          <small class="detach">
-            Fácil
-            <img src="./assets/images/star.svg" alt="Estrela preenchida">
-            <img src="./assets/images/star.svg" alt="Estrela preenchida">
-            <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-            <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-            <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-          </small>
-          <div class="arrows">
-            <div class="arrow-circ">
-              <img class="arrow" src="./assets/images/arrow_left.svg" alt="Seta para esquerda">
+          <small id="recipe-day" class="detach">Adicionado Ontem</small>
+          <h3 id="recipe-name">Sanduíche de tomate com salada de ovos</h3>
+          <div class="stars">
+            <small id="recipe-difficulty" class="detach">
+              Fácil
+            </small>
+            <div id="star">
+              <div>
+                <img src="./assets/images/star.svg" alt="Estrela preenchida">
+                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
+                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
+                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
+                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
+              </div>
             </div>
-            <div class="arrow-circ">
-              <img class="arrow" src="./assets/images/arrow_right.svg" alt="Seta para direita">
+            <div class="arrows">
+              <div class="arrow-circ" onclick="handleArrow()">
+                <img class="arrow" src="./assets/images/arrow_left.svg" alt="Seta para esquerda">
+              </div>
+              <div class="arrow-circ" onclick="handleArrow()">
+                <img class="arrow" src="./assets/images/arrow_right.svg" alt="Seta para direita">
+              </div>
             </div>
           </div>
         </div>
       </div>
       <img class="visual" src="./assets/images/elemento_5.svg" alt="Imagem aleatória para efeito visual">
     </div>
+
 
     <div class="gastronomic">
       <div class="titleElement">
@@ -183,18 +192,23 @@
       <img class="closeBox" src="./assets/images/fechar.svg" alt="">
       <img src="./assets/images/prato_1.png" alt="" />
       <div class="box-infos">
-        <div class="box-title">Ceviche de peixe branco 
+        <div class="box-title">Ceviche de peixe branco
           <p class="detach">Por Michel Filipe</p>
         </div>
-        <div class="box-text">O ceviche é um prato de origem peruana feito com cubos de peixe que são cozidos em uma solução ácida, geralmente caldo de limão. Quando o peixe em contato com o limão, um processo químico é iniciado: a proteína do peixe se desnatura e a textura do peixe muda e o peixe fica mais saboroso. O segredo para fazer um bom ceviche é a qualidade do ingrediente principal: o peixe tem que estar bem fresco. Esse prato peruano pode ser feito com salmão, camarões e alguns contam até com manga e abacate, e o tradicional é preparado com peixe branco.</div>
+        <div class="box-text">O ceviche é um prato de origem peruana feito com cubos de peixe que são cozidos em uma
+          solução ácida, geralmente caldo de limão. Quando o peixe em contato com o limão, um processo químico é
+          iniciado: a proteína do peixe se desnatura e a textura do peixe muda e o peixe fica mais saboroso. O segredo
+          para fazer um bom ceviche é a qualidade do ingrediente principal: o peixe tem que estar bem fresco. Esse prato
+          peruano pode ser feito com salmão, camarões e alguns contam até com manga e abacate, e o tradicional é
+          preparado com peixe branco.</div>
         <div class="box-buttons">
-        <button>
-          <img src="./assets/images/like.svg" alt="Icone curtida">
-          curtir</button>
-        <div>
-          <img src="./assets/images/arrow_right.svg" alt="Seta para direita">
-          <small class="detach">Ver foto</small>
-        </div>
+          <button>
+            <img src="./assets/images/like.svg" alt="Icone curtida">
+            curtir</button>
+          <div>
+            <img src="./assets/images/arrow_right.svg" alt="Seta para direita">
+            <small class="detach">Ver foto</small>
+          </div>
         </div>
       </div>
     </div>

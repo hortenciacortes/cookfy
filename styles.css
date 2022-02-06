@@ -161,10 +161,13 @@ main .recipe .recipe-items .recipe-image .areaDescription {
 main .recipe .recipe-items .recipe-text {
   width: 200px;
   height: 155px;
-
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+main .recipe .recipe-items .recipe-text .stars #star {
+  margin: 4px 0;
 }
 main .recipe .recipe-items .recipe-text .arrows {
   display: flex;
@@ -296,11 +299,11 @@ footer .social {
   align-items: center;
   justify-content: space-evenly;
 }
-footer .social > img {
+footer .social > a > img {
   width: 20px;
   height: 20px;
 }
-footer .social > img:hover {
+footer .social > a > img:hover {
   cursor: pointer;
   filter: invert(52%) sepia(96%) saturate(7430%) hue-rotate(337deg) brightness(93%) contrast(95%);
 }
