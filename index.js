@@ -105,6 +105,15 @@ document.querySelector(".closeBox").addEventListener("click", Modal.openCloseBox
 document.querySelector('.openPhoto').addEventListener("click", Modal.openClosePhoto)
 document.querySelector(".closePhoto").addEventListener("click", Modal.openClosePhoto);
 
+// LIKES
+const likes = () => {
+    if(document.querySelector('.likes').innerHTML === 'curtir'){
+        document.querySelector('.likes').innerHTML = 'curtido'
+    }else{
+        document.querySelector('.likes').innerHTML = 'curtir'
+    }
+}
+
 // API
 
 const getRandomUser = async () => {

@@ -475,15 +475,16 @@ footer .social > a > img:hover {
   color: #e82147;
   border: solid 1px #e82147;
   border-radius: 12px;
-  padding: 4px 14px;
+  padding: 4px 12px;
   margin-right: 18px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
   width: 80px;
 }
-
+.modal-box .box-infos .box-buttons > button > img {
+  margin-right: 4px;
+}
 /* MODAL RECIPE */
 .modal-photo{
   width: 640px;
