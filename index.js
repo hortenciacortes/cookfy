@@ -38,6 +38,44 @@ function handleArrow() {
     currentRecipe++;
 }
 
+// GATRONOMIC
+
+const handleGastronomic = {
+    cozinha(){
+        document.querySelector('#kitchen').classList.add('detach');
+        document.querySelector('#kitchen-img').classList.add('active');
+        document.querySelector('#patisserie').classList.remove('detach');
+        document.querySelector('#patisserie-img').classList.remove('active');
+        document.querySelector('#drinks').classList.remove('detach');
+        document.querySelector('#drinks-img').classList.remove('active');
+        document.querySelector('.gastro-img').innerHTML = `
+          <img class="gastro" src="./assets/images/kitchen.jpg" alt="Mini bolinho de morango" />
+        `;
+    },
+    patisserie(){
+        document.querySelector('#patisserie').classList.add('detach');
+        document.querySelector('#patisserie-img').classList.add('active');
+        document.querySelector('#kitchen').classList.remove('detach');
+        document.querySelector('#kitchen-img').classList.remove('active');
+        document.querySelector('#drinks').classList.remove('detach');
+        document.querySelector('#drinks-img').classList.remove('active');
+        document.querySelector('.gastro-img').innerHTML = `
+          <img class="gastro" src="./assets/images/prato_3.png" alt="Mini bolinho de morango" />
+        `;
+    },
+    drinks(){
+        document.querySelector('#drinks').classList.add('detach');
+        document.querySelector('#drinks-img').classList.add('active');
+        document.querySelector('#kitchen').classList.remove('detach');
+        document.querySelector('#kitchen-img').classList.remove('active');
+        document.querySelector('#patisserie').classList.remove('detach');
+        document.querySelector('#patisserie-img').classList.remove('active');
+        document.querySelector('.gastro-img').innerHTML = `
+          <img class="gastro" src="./assets/images/drinks_img.jpg" alt="Três drinks" />
+        `;
+    }
+}
+
 // MODAL'S
 const Modal = {
     openClose() {
@@ -61,6 +99,9 @@ const getRandomUser = async () => {
     const userJson = await api.json();
     const user = userJson.results;
 
+    document.querySelector('.name').innerHTML = `
+        ${user[0].name.first} ${user[0].name.last}
+    `;
     document.querySelector('.user').innerHTML = `
         ${user[0].gender === 'female' ? '<img src="./assets/images/avatar_feminino.svg">' : '<img src="./assets/images/avatar_masculino.svg"></img>'}
         <p class="detach">${user[0].name.first}</p>
@@ -69,7 +110,6 @@ const getRandomUser = async () => {
         <p class="detach">${user[0].name.first}</p>
         ${user[0].gender === 'female' ? '<img src="./assets/images/avatar_feminino.svg">' : '<img src="./assets/images/avatar_masculino.svg"></img>'}
     `;
-    console.log(user[0])
 };
 
 getRandomUser();
