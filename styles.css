@@ -76,6 +76,9 @@ input {
   padding: 10px;
   border-radius: 50%;
 }
+#header .user > p.detach{
+  margin-left: 10px;
+}
 #header-infos {
   display: flex;
   align-items: center;
@@ -356,8 +359,8 @@ footer .social > a > img:hover {
   height: 260px;
   margin-bottom: 70px;
 }
-.user > p.detach{
-  margin: 0 10px;
+.infoUser .user > p.detach{
+  margin-right: 10px;
 }
 .modal-sidebar .infoUser .contacts > div{
   display: flex;

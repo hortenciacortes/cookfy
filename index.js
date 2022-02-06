@@ -98,7 +98,7 @@ const getRandomUser = async () => {
     const api = await fetch("https://randomuser.me/api/");
     const userJson = await api.json();
     const user = userJson.results;
-
+    
     document.querySelector('.name').innerHTML = `
         ${user[0].name.first} ${user[0].name.last}
     `;
@@ -110,6 +110,8 @@ const getRandomUser = async () => {
         <p class="detach">${user[0].name.first}</p>
         ${user[0].gender === 'female' ? '<img src="./assets/images/avatar_feminino.svg">' : '<img src="./assets/images/avatar_masculino.svg"></img>'}
     `;
+    document.querySelector('#email').innerHTML = user[0].email;
+    document.querySelector('#telephone').innerHTML = user[0].cell;
 };
 
 getRandomUser();
