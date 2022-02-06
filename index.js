@@ -2,6 +2,8 @@
 const recipe = [
     { name: 'Sanduíche de tomate com salada de ovos', url: 'prato_2.png', difficulty: 'Fácil', star: 1, days: 1 },
     { name: 'Iogurte de fruta crocante', url: 'prato_4.png', difficulty: 'Difícil', star: 4, days: 2 },
+    { name: 'Iogurte', url: 'prato_4.png', difficulty: 'Médio', star: 3, days: 4 },
+    { name: 'Fruta', url: 'prato_4.png', difficulty: 'Difícil', star: 5, days: 8 },
 ];
 let currentRecipe = 1;
 function handleArrow() {
@@ -10,29 +12,34 @@ function handleArrow() {
             currentRecipe = 0;
         }
         if (i === currentRecipe) {
-            document.getElementById('recipe-img').innerHTML = `
-                <img id="recipe-img" src="./assets/images/${recipe[i].url}" alt=${recipe[0].name}>
-            `
-            document.getElementById('recipe-day').innerHTML = `Adicionado ${recipe[i].days === 1 ? 'ontem' : 'a ' + recipe[i].days + ' dias'}`
-            document.getElementById('recipe-name').innerHTML = recipe[i].name;
-            document.getElementById('recipe-difficulty').innerHTML = recipe[i].difficulty;
-            if (recipe[i].star === 2) {
-                document.getElementById('star').innerHTML = ` 
-                <img src="./assets/images/star.svg" alt="Estrela preenchida">
-                <img src="./assets/images/star.svg" alt="Estrela preenchida">
-                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-                `;
-            } else if (recipe[i].star === 4) {
-                document.getElementById('star').innerHTML = ` 
-                <img src="./assets/images/star.svg" alt="Estrela preenchida">
-                <img src="./assets/images/star.svg" alt="Estrela preenchida">
-                <img src="./assets/images/star.svg" alt="Estrela preenchida">
-                <img src="./assets/images/star.svg" alt="Estrela preenchida">
-                <img src="./assets/images/star_empty.svg" alt="Estrela vazia">
-                `;
-            }
+            const img = `<img id="recipe-img" src="./assets/images/${recipe[i].url}" alt=${recipe[0].name}>`;
+            const days = `Adicionado ${recipe[i].days === 1 ? 'ontem' : 'a ' + recipe[i].days + ' dias'}`;
+            const name = recipe[i].name;
+            const difficulty = recipe[i].difficulty;
+
+            document.getElementById('recipe-img').innerHTML = img
+            document.getElementById('recipe-day').innerHTML = days
+            document.getElementById('recipe-name').innerHTML = name
+            document.getElementById('recipe-difficulty').innerHTML = difficulty;
+            
+            document.getElementById('photo-img').innerHTML = img
+            document.getElementById('photo-day').innerHTML = days
+            document.getElementById('photo-name').innerHTML = name
+            document.getElementById('photo-difficulty').innerHTML = difficulty;
+            
+            const starFull = '<img src="./assets/images/star.svg" alt="Estrela preenchida">';
+            const starEmpty = '<img src="./assets/images/star_empty.svg" alt="Estrela vazia">';
+            if (recipe[i].star === 1) document.getElementById('star').innerHTML = starFull + starEmpty + starEmpty + starEmpty + starEmpty
+            if (recipe[i].star === 2) document.getElementById('star').innerHTML = starFull + starFull + starEmpty + starEmpty + starEmpty
+            if (recipe[i].star === 3) document.getElementById('star').innerHTML = starFull + starFull + starFull + starEmpty + starEmpty
+            if (recipe[i].star === 4) document.getElementById('star').innerHTML = starFull + starFull + starFull + starFull + starEmpty
+            if (recipe[i].star === 5) document.getElementById('star').innerHTML = starFull + starFull + starFull + starFull + starFull
+            
+            if (recipe[i].star === 1) document.getElementById('photo-star').innerHTML = starFull + starEmpty + starEmpty + starEmpty + starEmpty
+            if (recipe[i].star === 2) document.getElementById('photo-star').innerHTML = starFull + starFull + starEmpty + starEmpty + starEmpty
+            if (recipe[i].star === 3) document.getElementById('photo-star').innerHTML = starFull + starFull + starFull + starEmpty + starEmpty
+            if (recipe[i].star === 4) document.getElementById('photo-star').innerHTML = starFull + starFull + starFull + starFull + starEmpty
+            if (recipe[i].star === 5) document.getElementById('photo-star').innerHTML = starFull + starFull + starFull + starFull + starFull
         }
     }
     currentRecipe++;
@@ -83,14 +90,20 @@ const Modal = {
     },
     openCloseBox() {
         document.querySelector("#modal-box-active").classList.toggle("modal-active");
+    },
+    openClosePhoto() {
+        document.querySelector("#modal-photo-active").classList.toggle("modal-active");
     }
 };
 
 document.getElementById("user").addEventListener("click", Modal.openClose);
 document.querySelector(".closeSidebar").addEventListener("click", Modal.openClose);
 
-document.querySelector('.areaDescription').addEventListener("click", Modal.openCloseBox)
+document.querySelector('.openInfos').addEventListener("click", Modal.openCloseBox)
 document.querySelector(".closeBox").addEventListener("click", Modal.openCloseBox);
+
+document.querySelector('.openPhoto').addEventListener("click", Modal.openClosePhoto)
+document.querySelector(".closePhoto").addEventListener("click", Modal.openClosePhoto);
 
 // API
 
@@ -98,7 +111,7 @@ const getRandomUser = async () => {
     const api = await fetch("https://randomuser.me/api/");
     const userJson = await api.json();
     const user = userJson.results;
-    
+
     document.querySelector('.name').innerHTML = `
         ${user[0].name.first} ${user[0].name.last}
     `;

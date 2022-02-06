@@ -33,7 +33,7 @@
       </div>
       <div class="header-image">
         <img src="./assets/images/prato_1.png" />
-        <figcaption class="areaDescription">
+        <figcaption class="areaDescription openInfos" >
           <img src="./assets/images/arrow_right.svg" alt="Seta para direita">
           <small class="detach">Ver foto</small>
         </figcaption>
@@ -49,7 +49,7 @@
           <div id="recipe-img">
             <img src="./assets/images/prato_2.png" alt="Sanduíche de tomate com salada de ovos">
           </div>
-          <figcaption class="areaDescription">
+          <figcaption class="areaDescription openPhoto">
             <img src="./assets/images/arrow_right.svg" alt="Seta para direita">
             <small class="detach">Ver foto</small>
           </figcaption>
@@ -93,11 +93,13 @@
       <div class="containGastronomic">
         <div>
           <div id="kitchen" class="card" onclick="handleGastronomic.cozinha()">
-            <img id="kitchen-img" class="imgSvg" src="./assets/images/cozinha.svg" alt="Imagem ilustrativa de uma bandeja" />
+            <img id="kitchen-img" class="imgSvg" src="./assets/images/cozinha.svg"
+              alt="Imagem ilustrativa de uma bandeja" />
             <h3>Cozinha</h3>
           </div>
           <div id="patisserie" class="card detach" onclick="handleGastronomic.patisserie()">
-            <img id="patisserie-img" class="imgSvg active" src="./assets/images/patisserie.svg" alt="Imagem ilustrativa de um doce" />
+            <img id="patisserie-img" class="imgSvg active" src="./assets/images/patisserie.svg"
+              alt="Imagem ilustrativa de um doce" />
             <h3>Patisserie</h3>
           </div>
           <div id="drinks" class="card" onclick="handleGastronomic.drinks()">
@@ -197,7 +199,7 @@
 
   <div id="modal-box-active" class="modal-overlay">
     <div class="modal-box">
-      <img class="closeBox" src="./assets/images/fechar.svg" alt="">
+      <img class="close closeBox" src="./assets/images/fechar.svg" alt="">
       <img src="./assets/images/prato_1.png" alt="" />
       <div class="box-infos">
         <div class="box-title">Ceviche de peixe branco
@@ -216,6 +218,27 @@
           <div>
             <img src="./assets/images/arrow_right.svg" alt="Seta para direita">
             <small class="detach">Ver foto</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-photo-active" class="modal-overlay">
+    <div class="modal-photo">
+      <img class="close closePhoto" src="./assets/images/fechar.svg" alt="">
+      <div class="recipe-items">
+        <div class="recipe-image">
+          <div id="photo-img">
+            </div>
+        </div>
+        <div class="recipe-text">
+          <small id="photo-day" class="detach"></small>
+          <h3 id="photo-name"></h3>
+          <div class="stars">
+            <small id="photo-difficulty" class="detach"></small>
+            <div id="photo-star">
+            </div>
           </div>
         </div>
       </div>

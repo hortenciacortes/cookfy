@@ -146,21 +146,21 @@ main .recipe > img {
   width: 70px;
   margin-left: 850px;
 }
-main .recipe .recipe-items {
+.recipe-items {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-main .recipe .recipe-items .recipe-image {
+.recipe-items .recipe-image {
   position: relative;
 }
-main .recipe .recipe-items .recipe-image .areaDescription {
+.recipe-items .recipe-image .areaDescription {
     top: 153px;
 
     left: 37px;
     width: 320px;
 }
-main .recipe .recipe-items .recipe-text {
+.recipe-items .recipe-text {
   width: 200px;
   height: 155px;
   
@@ -168,16 +168,16 @@ main .recipe .recipe-items .recipe-text {
   flex-direction: column;
   justify-content: space-between;
 }
-main .recipe .recipe-items .recipe-text .stars #star {
+.recipe-items .recipe-text .stars #star {
   margin: 4px 0;
 }
-main .recipe .recipe-items .recipe-text .arrows {
+.recipe-items .recipe-text .arrows {
   display: flex;
 }
-main .recipe .recipe-items .recipe-text .arrow {
+.recipe-items .recipe-text .arrow {
   width: 10px;
 }
-main .recipe .recipe-items .recipe-text .arrow-circ {
+.recipe-items .recipe-text .arrow-circ {
   display: flex;
   align-items: center;
 
@@ -187,11 +187,11 @@ main .recipe .recipe-items .recipe-text .arrow-circ {
   box-shadow: 0 1.5px 3px 0 rgb(0 0 0 / 16%);
   background-color: #ffff;
 }
-main .recipe .recipe-items .recipe-text .arrow-circ:hover {
+.recipe-items .recipe-text .arrow-circ:hover {
   cursor: pointer;
   background-color: #e82147;
 }
-main .recipe .recipe-items .recipe-text .arrow-circ:hover .arrow {
+.recipe-items .recipe-text .arrow-circ:hover .arrow {
   filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(83deg) brightness(109%) contrast(100%);
 }
 main .recipe > img.visual {
@@ -419,8 +419,8 @@ footer .social > a > img:hover {
   color: #C4C1C1;
 }
 
-/* MODAL BOX */
-.modal-box{
+/* MODAL BOX AND PHOTO */
+.modal-box, .modal-photo{
   position: relative;
 
   display: flex;
@@ -433,12 +433,15 @@ footer .social > a > img:hover {
   background-color: #fff;
   border: 5px solid #0808089b;
 }
-.modal-box .closeBox{
+.close{
+  cursor: pointer;
   position: absolute;
   top: 14px;
   right: 22px;
   width: 15px;
 }
+
+/* MODAL BOX */
 .modal-box .closeBox:hover{
   cursor: pointer;
 }
@@ -479,4 +482,13 @@ footer .social > a > img:hover {
   align-items: center;
   justify-content: space-between;
   width: 80px;
+}
+
+/* MODAL RECIPE */
+.modal-photo{
+  width: 640px;
+  height: 227px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
 }
