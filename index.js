@@ -53,3 +53,13 @@ document.querySelector(".closeSidebar").addEventListener("click", Modal.openClos
 
 document.querySelector('.areaDescription').addEventListener("click", Modal.openCloseBox)
 document.querySelector(".closeBox").addEventListener("click", Modal.openCloseBox);
+
+// API
+
+const getRandomUser = async () => {
+    const user = await fetch("https://randomuser.me/api/");
+    const userJson = await user.json();
+    console.log(userJson.results);
+};
+
+getRandomUser();
