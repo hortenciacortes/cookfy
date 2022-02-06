@@ -60,13 +60,15 @@ input {
   background-size: 14px;
   background-position: 326px;
 }
+#user{
+  cursor: pointer;
+}
 .user {
   display: flex;
   align-items: center;
 }
 .user > p.detach {
   font-weight: bold;
-  margin-right: 10px;
 }
 .user > img {
   width: 60px;
@@ -303,8 +305,6 @@ footer .social > img:hover {
 }
 
 
-
-
 /* modal */
 .modal-overlay{
   position: fixed;
@@ -337,7 +337,7 @@ footer .social > img:hover {
 }
 .modal-overlay .modal-sidebar .closeModal{
   display: flex;
-  /* align-items: center; */
+  cursor: pointer;
 }
 .modal-overlay .modal-sidebar .closeModal img{
   width: 15px;
@@ -353,8 +353,7 @@ footer .social > img:hover {
   margin-bottom: 70px;
 }
 .user > p.detach{
-  margin-left: 10px;
-  margin-right: 0;
+  margin: 0 10px;
 }
 .modal-overlay .modal-sidebar .infoUser .contacts > div{
   display: flex;
@@ -397,11 +396,13 @@ footer .social > img:hover {
   color: #f0f0f0;
   border: none;
   border-radius: 25px;
+  cursor: pointer;
 }
 .settings > div{
   display: flex;
   align-items: center;
   padding: 8px 0;
+  cursor: pointer;
 }
 .settings > div > img{
   width: 12px;
@@ -471,5 +472,4 @@ footer .social > img:hover {
   align-items: center;
   justify-content: space-between;
   width: 80px;
-
 }
