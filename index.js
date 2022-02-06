@@ -57,9 +57,19 @@ document.querySelector(".closeBox").addEventListener("click", Modal.openCloseBox
 // API
 
 const getRandomUser = async () => {
-    const user = await fetch("https://randomuser.me/api/");
-    const userJson = await user.json();
-    console.log(userJson.results);
+    const api = await fetch("https://randomuser.me/api/");
+    const userJson = await api.json();
+    const user = userJson.results;
+
+    document.querySelector('.user').innerHTML = `
+        ${user[0].gender === 'female' ? '<img src="./assets/images/avatar_feminino.svg">' : '<img src="./assets/images/avatar_masculino.svg"></img>'}
+        <p class="detach">${user[0].name.first}</p>
+    `;
+    document.querySelector('#user-sidebar').innerHTML = `
+        <p class="detach">${user[0].name.first}</p>
+        ${user[0].gender === 'female' ? '<img src="./assets/images/avatar_feminino.svg">' : '<img src="./assets/images/avatar_masculino.svg"></img>'}
+    `;
+    console.log(user[0])
 };
 
 getRandomUser();
