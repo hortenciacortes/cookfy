@@ -16,12 +16,6 @@ small {
   font-size: 12px;
   font-weight: bold;
 }
-/* HEADER */
-header {
-  height: 386px;
-  background-color: #ffdbbc;
-  padding: 24px 0;
-}
 h2 {
   font-family: "Playfair Display", serif;
   font-size: 28px;
@@ -31,6 +25,12 @@ h2 {
 }
 h3 {
   font-family: "Playfair Display", serif;
+}
+/* HEADER */
+header {
+  height: 386px;
+  background-color: #ffdbbc;
+  padding: 24px 0;
 }
 #header {
   display: flex;
@@ -46,7 +46,7 @@ h3 {
   font-size: 20.5px;
   font-weight: bold;
 }
-input {
+#header input {
   width: 366px;
   height: 30px;
   border-radius: 16.5px;
@@ -134,15 +134,15 @@ input {
 }
 /* MAIN */
 /* RECIPE */
-main .recipe {
+.recipe {
   max-width: 950px;
   margin: auto;
   padding: 45px 0 0;
 }
-main .recipe > h2 {
+.recipe > h2 {
   margin-bottom: 0;
 }
-main .recipe > img {
+.recipe > img {
   width: 70px;
   margin-left: 850px;
 }
@@ -194,22 +194,21 @@ main .recipe > img {
 .recipe-items .recipe-text .arrow-circ:hover .arrow {
   filter: invert(100%) sepia(0%) saturate(7486%) hue-rotate(83deg) brightness(109%) contrast(100%);
 }
-main .recipe > img.visual {
+.recipe > img.visual {
   display: flex;
   margin: 50px auto;
   width: 120px;
 }
 /* GATRONOMIC */
-
-main .gastronomic {
+.gastronomic {
   max-width: 950px;
   margin: auto;
   padding: 0 0 120px;
 }
-main .gastronomic img {
+.gastronomic img {
   width: 100px;
 }
-main .gastronomic .titleElement {
+.gastronomic .titleElement {
   display: flex;
   align-items: center;
 }
@@ -220,10 +219,10 @@ main .gastronomic .titleElement {
 .active{
     filter: invert(52%) sepia(96%) saturate(7430%) hue-rotate(337deg) brightness(93%) contrast(95%);
 }
-main .gastronomic .titleElement h2 {
+.gastronomic .titleElement h2 {
   min-width: 400px;
 }
-main .gastronomic .containGastronomic {
+.gastronomic .containGastronomic {
   font-family: "Playfair Display", serif;
   color: #969090;
 
@@ -232,7 +231,7 @@ main .gastronomic .containGastronomic {
   justify-content: end;
   margin: 20px auto;
 }
-main .gastronomic .containGastronomic .card {
+.gastronomic .containGastronomic .card {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -241,14 +240,14 @@ main .gastronomic .containGastronomic .card {
   padding: 20px 60px;
   border: solid 0.5px #f0f0f0;
 }
-main .gastronomic .containGastronomic .card.detach {
+.gastronomic .containGastronomic .card.detach {
   box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.16);
 }
-main .gastronomic .containGastronomic .card img {
+.gastronomic .containGastronomic .card img {
   width: 40px;
   height: 40px;
 }
-main .gastronomic .containGastronomic img.gastro {
+.gastronomic .containGastronomic img.gastro {
   width: 380px;
   margin-right: 20px;
 }
@@ -309,9 +308,7 @@ footer .social > a > img:hover {
   cursor: pointer;
   filter: invert(52%) sepia(96%) saturate(7430%) hue-rotate(337deg) brightness(93%) contrast(95%);
 }
-
-
-/* modal */
+/* MODAL'S */
 .modal-overlay{
   position: fixed;
   top: 0;
@@ -340,7 +337,6 @@ footer .social > a > img:hover {
   width: 380px;
   height: 100vh;
   background-color: #fff;
-  
 }
 .modal-sidebar .closeSidebar{
   display: flex;
@@ -418,7 +414,6 @@ footer .social > a > img:hover {
   font-size: 10px;
   color: #C4C1C1;
 }
-
 /* MODAL BOX AND PHOTO */
 .modal-box, .modal-photo{
   position: relative;
@@ -440,7 +435,6 @@ footer .social > a > img:hover {
   right: 22px;
   width: 15px;
 }
-
 /* MODAL BOX */
 .modal-box .closeBox:hover{
   cursor: pointer;
