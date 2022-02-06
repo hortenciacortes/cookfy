@@ -6,7 +6,8 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+button{
+  cursor: pointer;
 }
 .detach {
   color: #e82147;
@@ -108,7 +109,7 @@ input {
 }
 .areaDescription{
     position: absolute;
-    top: 165px;
+    top: 157px;
 
     width: 225px;
     height: 35px;
@@ -324,6 +325,7 @@ footer .social > img:hover {
   visibility: visible;
   opacity: 1;
 }
+/* SIDEBAR */
 .modal-sidebar{
   display: flex;
   flex-direction: column;
@@ -335,16 +337,16 @@ footer .social > img:hover {
   background-color: #fff;
   
 }
-.modal-overlay .modal-sidebar .closeModal{
+.modal-sidebar .closeSidebar{
   display: flex;
   cursor: pointer;
 }
-.modal-overlay .modal-sidebar .closeModal img{
+.modal-sidebar .closeSidebar img{
   width: 15px;
   height: 15px;
   margin-right: 8px;
 }
-.modal-overlay .modal-sidebar .infoUser{
+.modal-sidebar .infoUser{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -355,48 +357,47 @@ footer .social > img:hover {
 .user > p.detach{
   margin: 0 10px;
 }
-.modal-overlay .modal-sidebar .infoUser .contacts > div{
+.modal-sidebar .infoUser .contacts > div{
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-.modal-overlay .modal-sidebar .infoUser .contacts img{
+.modal-sidebar .infoUser .contacts img{
   width: 12px;
   margin-right: 5px;
 }
-.modal-overlay .modal-sidebar small{
+.modal-sidebar small{
   font-size: 10px;
 }
-.modal-overlay .modal-sidebar .infoUser .plan{
+.modal-sidebar .infoUser .plan{
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 250px;
 }
-.modal-overlay .modal-sidebar .infoUser .bar{
+.modal-sidebar .infoUser .bar{
   display: flex;
 }
-.modal-overlay .modal-sidebar .infoUser .bar > div{
+.modal-sidebar .infoUser .bar > div{
   width: 260px;
   height: 10px;
   margin-bottom: 2px;
   border-radius: 20px;
 }
-.modal-overlay .modal-sidebar .infoUser .bar > div.bar_1{
+.modal-sidebar .infoUser .bar > div.bar_1{
   position: absolute;
   width: 150px;
   background-color: #e82147;
 }
-.modal-overlay .modal-sidebar .infoUser .bar > div.bar_2{
+.modal-sidebar .infoUser .bar > div.bar_2{
   background-color: #E8E8E8;
 }
-.modal-overlay .modal-sidebar .infoUser button{
+.modal-sidebar .infoUser button{
   padding: 10px;
   background-color: #e82147;
   color: #f0f0f0;
   border: none;
   border-radius: 25px;
-  cursor: pointer;
 }
 .settings > div{
   display: flex;
@@ -427,13 +428,13 @@ footer .social > img:hover {
   background-color: #fff;
   border: 5px solid #0808089b;
 }
-.modal-box .close{
+.modal-box .closeBox{
   position: absolute;
   top: 14px;
   right: 22px;
   width: 15px;
 }
-.modal-box .close:hover{
+.modal-box .closeBox:hover{
   cursor: pointer;
 }
 .modal-box .box-infos{
@@ -455,6 +456,7 @@ footer .social > img:hover {
   align-items: center;
 }
 .modal-box .box-infos .box-buttons > div {
+  cursor: pointer;
   display: flex;
   align-items: center;    
   justify-content: space-between;
