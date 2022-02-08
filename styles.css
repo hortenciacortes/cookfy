@@ -488,3 +488,51 @@ footer .social > a > img:hover {
   border-radius: 8px;
   box-shadow: 0 1.5px 3px 0 rgba(0, 0, 0, 0.16);
 }
+
+@media(max-width: 600px){
+  /* HEADER */
+  header{
+    padding: 24px 10px;
+  }
+  #header-infos > img, #header-infos .header-image, #header input{
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+  }
+  /* RECIPE */
+  .recipe-items{
+    flex-direction: column;
+  }
+  .gastronomic img.element{
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+  }
+  .gastronomic .containGastronomic{
+    flex-direction: column;
+  }
+  .gastronomic .containGastronomic > div{
+    display: flex;
+  }
+  .gastronomic .containGastronomic .card{
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+
+  footer .figures{
+    opacity: 0;
+    visibility: hidden;
+    width: 0px;
+  }
+  footer .containFooter{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  footer .copyright{
+    margin: 0 0 10px 0;
+  }
+
+}
