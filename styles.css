@@ -252,6 +252,10 @@ header {
   margin-right: 20px;
 }
 /* FOOTER */
+.footer{
+  max-width: 950px;
+  margin: auto  ;
+}
 footer img.footerBack {
   position: relative;
   width: 100%;
@@ -266,14 +270,11 @@ footer .figures > img {
   height: 75px;
 }
 footer .figures > img.figure1 {
-    margin-top: 15px;
-    margin-left: 50px;
     position: absolute;
 }
 footer .figures > img.figure2 {
     position: absolute;
     margin-left: 850px;
-    margin-top: 20px;
     z-index: 1;
 }
 footer .containFooter {
@@ -281,7 +282,7 @@ footer .containFooter {
   position: absolute;
   z-index: 1;
   
-  margin-top: 50px;
+  margin-top: 90px;
   margin-left: 180px;
 }
 footer .copyright {
