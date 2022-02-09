@@ -544,6 +544,15 @@ footer .social > a > img:hover {
   footer .containFooter {
     height: 80px;
   }
+  .modal-box, .modal-photo{
+    width: 650px;
+  }
+  .modal-box,
+  .modal-photo {
+    flex-direction: column;
+    height: 650px;
+    width: 88%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -589,11 +598,5 @@ footer .social > a > img:hover {
   }
   .modal-photo {
     height: 500px;
-  }
-  .modal-box,
-  .modal-photo {
-    flex-direction: column;
-    height: 650px;
-    width: 92%;
   }
 }
